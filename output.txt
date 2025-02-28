@@ -1,0 +1,7 @@
+100 15 50 10 57 120 18 
+Reversed list: 18 120 57 10 50 15 100 
+Size: 7
+Middle point of the list: 10
+18 120 10 50 15 100 
+Middle point of the list: 50
+Size: 6

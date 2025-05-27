@@ -1,44 +1,133 @@
-# Singly Linked List Implementation in C++
+# C++ Linked List Implementations
 
-This repository contains a C++ implementation of a **singly linked list** with common operations like insertion, deletion, reversal, and printing.
+This repository contains C++ implementations of **Singly Linked List** and **Doubly Linked List**, including common operations such as insertion, deletion, traversal, and more.
 
 ---
 
-## Features
+## 📌 Contents
 
-### Node Operations
+- [Singly Linked List](#singly-linked-list)
+  - Features
+  - Code Structure
+  - Example Usage
+- [Doubly Linked List](#doubly-linked-list)
+  - Features
+  - Code Structure
+  - Example Usage
+
+---
+
+## Singly Linked List
+
+### ✅ Features
+
 - **Insertion**:
-  - Insert at the front (`insertinFront`).
-  - Insert at the back (`insertinBack`).
-  - Insert at a specific position (`insertinPos`).
+  - At head (`insertAtHead`)
+  - At tail (`insertAtTail`)
+  - At a specific position (`insertAtPos`)
 - **Deletion**:
-  - Delete a node at a specific position (`Delete`).
-- **Reversal**:
-  - Reverse the entire list (`reverse`).
+  - At a specific position (`deleteNode`)
 - **Utilities**:
-  - Print the entire list (`printlist`).
-  - Find the middle element using the two-pointer technique (`middleNumberofList`).
+  - Print the entire list (`print`)
+  - Find the middle element (`middlePoint`)
+  - Reverse the list (`reverse`)
+
+### 📦 Code Structure
+
+#### `Node` Class
+- Represents a node in the singly linked list.
+- Attributes:
+  - `int data`
+  - `Node* next`
+
+#### `Linked_list` Class
+- Attributes:
+  - `Node* head`
+  - `Node* tail`
+- Key Methods:
+  - `insertAtHead(int value)`
+  - `insertAtTail(int value)`
+  - `insertAtPos(int pos, int value)`
+  - `deleteNode(int pos)`
+  - `print(Linked_list &list)`
+  - `middlePoint(Linked_list list)`
+  - `reverse(Linked_list &list)`
+
+### 💻 Example Usage
+
+```cpp
+Linked_list list;
+list.insertAtHead(10);
+list.insertAtTail(20);
+list.insertAtPos(2, 15);
+print(list);
+middlePoint(list);
+reverse(list);
+print(list);
+```
+
 ---
 
-## Code Structure
+## Doubly Linked List
 
-### `Node` Class
-- Represents a node in the linked list.
-- Contains:
-  - `int val`: Value stored in the node.
-  - `Node* next`: Pointer to the next node.
+### ✅ Features
 
-### `linked_list` Class
-- Manages the linked list.
-- Contains:
-  - `Node* head`: Pointer to the first node.
-  - `Node* tail`: Pointer to the last node.
-- Methods:
-  - `insertinFront(int val)`: Inserts a new node with value at the front of the list.
-  - `insertinBack(int val)`:  Inserts a new node with value at the end of the list.
-  - `insertinPos(int val, int pos)`: Inserts a new node with value at the specified position.
-  - `Delete(int pos)`: Deletes the node at the specified position.
-  - `reverse()`: Reverses the linked list in-place by modifying pointers.
-  - `middleNumberofList()`: Finds and prints the middle element of the list.
-  - `printlist()`: Prints all elements of the linked list sequentially.
+- **Insertion**:
+  - At head (`insertAtHead`)
+  - At tail (`insertAtTail`)
+  - At a specific position (`insertAtPos`)
+- **Deletion**:
+  - At a specific position (`deletion`)
+- **Utilities**:
+  - Print the entire list (`print`)
+
+### 📦 Code Structure
+
+#### `Node` Class
+- Represents a node in the doubly linked list.
+- Attributes:
+  - `int data`
+  - `Node* Next`
+  - `Node* prev`
+
+#### `Linked_List` Class
+- Attributes:
+  - `Node* head`
+  - `Node* tail`
+- Key Methods:
+  - `insertAtHead(int data)`
+  - `insertAtTail(int data)`
+  - `insertAtPos(int pos, int data)`
+  - `deletion(int pos)`
+  - `print(Linked_List list)`
+
+### 💻 Example Usage
+
+```cpp
+Linked_List list;
+list.insertAtHead(30);
+list.insertAtTail(50);
+list.insertAtPos(2, 40);
+print(list);
+list.deletion(2);
+print(list);
+```
+
+---
+
+## 📎 Notes
+
+- Both implementations use dynamic memory (`new`, `delete`) and pointer manipulation.
+- They serve as good examples for learning fundamental data structures in C++.
+
+---
+
+## 📁 File Structure
+
+```
+├── Singly_Linked_List.cpp
+├── Doubly_Linked_List.cpp
+└── README.md
+```
+
 ---

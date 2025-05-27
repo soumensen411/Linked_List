@@ -1,59 +1,94 @@
-# C++ Linked List Implementations
+# Singly & Doubly Linked List Implementations in C++
 
-This repository contains C++ implementations of **Singly Linked List** and **Doubly Linked List**, including common operations such as insertion, deletion, traversal, and more.
-
----
-
-## 📌 Contents
-
-- [Singly Linked List](#singly-linked-list)
-  - Features
-  - Code Structure
-  - Example Usage
-- [Doubly Linked List](#doubly-linked-list)
-  - Features
-  - Code Structure
-  - Example Usage
+This repository contains C++ implementations of **Singly Linked List** and **Doubly Linked List** with common operations like insertion, deletion, traversal, and reversal.
 
 ---
 
 ## Singly Linked List
 
-### ✅ Features
+### Features
 
+#### Node Operations
 - **Insertion**:
-  - At head (`insertAtHead`)
-  - At tail (`insertAtTail`)
-  - At a specific position (`insertAtPos`)
+  - Insert at the front (`insertAtHead`).
+  - Insert at the back (`insertAtTail`).
+  - Insert at a specific position (`insertAtPos`).
 - **Deletion**:
-  - At a specific position (`deleteNode`)
+  - Delete a node at a specific position (`deleteNode`).
+- **Reversal**:
+  - Reverse the entire list (`reverse`).
 - **Utilities**:
-  - Print the entire list (`print`)
-  - Find the middle element (`middlePoint`)
-  - Reverse the list (`reverse`)
+  - Print the entire list (`print`).
+  - Find the middle element using the two-pointer technique (`middlePoint`).
 
-### 📦 Code Structure
+---
+
+### Code Structure
 
 #### `Node` Class
 - Represents a node in the singly linked list.
-- Attributes:
-  - `int data`
-  - `Node* next`
+- Contains:
+  - `int data`: Value stored in the node.
+  - `Node* next`: Pointer to the next node.
 
 #### `Linked_list` Class
-- Attributes:
-  - `Node* head`
-  - `Node* tail`
-- Key Methods:
+- Manages the singly linked list.
+- Contains:
+  - `Node* head`: Pointer to the first node.
+  - `Node* tail`: Pointer to the last node.
+- Methods:
   - `insertAtHead(int value)`
   - `insertAtTail(int value)`
   - `insertAtPos(int pos, int value)`
   - `deleteNode(int pos)`
-  - `print(Linked_list &list)`
-  - `middlePoint(Linked_list list)`
-  - `reverse(Linked_list &list)`
+  - `reverse()`
+  - `middlePoint()`
+  - `print()`
 
-### 💻 Example Usage
+---
+
+## Doubly Linked List
+
+### Features
+
+#### Node Operations
+- **Insertion**:
+  - Insert at the front (`insertAtHead`).
+  - Insert at the back (`insertAtTail`).
+  - Insert at a specific position (`insertAtPos`).
+- **Deletion**:
+  - Delete a node at a specific position (`deletion`).
+- **Utilities**:
+  - Print the entire list (`print`).
+
+---
+
+### Code Structure
+
+#### `Node` Class
+- Represents a node in the doubly linked list.
+- Contains:
+  - `int data`: Value stored in the node.
+  - `Node* Next`: Pointer to the next node.
+  - `Node* prev`: Pointer to the previous node.
+
+#### `Linked_List` Class
+- Manages the doubly linked list.
+- Contains:
+  - `Node* head`: Pointer to the first node.
+  - `Node* tail`: Pointer to the last node.
+- Methods:
+  - `insertAtHead(int data)`
+  - `insertAtTail(int data)`
+  - `insertAtPos(int pos, int data)`
+  - `deletion(int pos)`
+  - `print()`
+
+---
+
+## Example Usage
+
+### Singly Linked List
 
 ```cpp
 Linked_list list;
@@ -64,70 +99,3 @@ print(list);
 middlePoint(list);
 reverse(list);
 print(list);
-```
-
----
-
-## Doubly Linked List
-
-### ✅ Features
-
-- **Insertion**:
-  - At head (`insertAtHead`)
-  - At tail (`insertAtTail`)
-  - At a specific position (`insertAtPos`)
-- **Deletion**:
-  - At a specific position (`deletion`)
-- **Utilities**:
-  - Print the entire list (`print`)
-
-### 📦 Code Structure
-
-#### `Node` Class
-- Represents a node in the doubly linked list.
-- Attributes:
-  - `int data`
-  - `Node* Next`
-  - `Node* prev`
-
-#### `Linked_List` Class
-- Attributes:
-  - `Node* head`
-  - `Node* tail`
-- Key Methods:
-  - `insertAtHead(int data)`
-  - `insertAtTail(int data)`
-  - `insertAtPos(int pos, int data)`
-  - `deletion(int pos)`
-  - `print(Linked_List list)`
-
-### 💻 Example Usage
-
-```cpp
-Linked_List list;
-list.insertAtHead(30);
-list.insertAtTail(50);
-list.insertAtPos(2, 40);
-print(list);
-list.deletion(2);
-print(list);
-```
-
----
-
-## 📎 Notes
-
-- Both implementations use dynamic memory (`new`, `delete`) and pointer manipulation.
-- They serve as good examples for learning fundamental data structures in C++.
-
----
-
-## 📁 File Structure
-
-```
-├── Singly_Linked_List.cpp
-├── Doubly_Linked_List.cpp
-└── README.md
-```
-
----

@@ -123,7 +123,7 @@ void print(Linked_List list)
 }
 int main()
 {
-    // inputOutput();
+    inputOutput();
     Linked_List list;
     list.insert(3, 10);
     list.insert(10, 20);

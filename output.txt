@@ -1,9 +1,0 @@
-46 50 30 20 10 46 70 
-head: 46 tail: 70 size: 7
-50 30 20 10 46 70 
-head: 50 tail: 70 size: 6
-50 30 20 10 46 
-head: 50 tail: 46 size: 5
-middle: 20
-46 10 20 30 50 
-head: 46 tail: 50 size: 5

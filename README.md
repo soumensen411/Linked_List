@@ -1,6 +1,6 @@
-# Singly & Doubly Linked List Implementations in C++
+# Singly, Doubly & Circular Linked List Implementations in C++
 
-This repository contains C++ implementations of **Singly Linked List** and **Doubly Linked List** with common operations like insertion, deletion, traversal, and reversal.
+This repository contains C++ implementations of **Singly Linked List**, **Doubly Linked List**, and **Circular Linked List**, with common operations like insertion, deletion, traversal, and reversal.
 
 ---
 
@@ -86,16 +86,36 @@ This repository contains C++ implementations of **Singly Linked List** and **Dou
 
 ---
 
-## Example Usage
+## Circular Linked List
 
-### Singly Linked List
+### Features
 
-```cpp
-Linked_list list;
-list.insertAtHead(10);
-list.insertAtTail(20);
-list.insertAtPos(2, 15);
-print(list);
-middlePoint(list);
-reverse(list);
-print(list);
+#### Node Operations
+- **Insertion**:
+  - Insert a node after a given value (`insert(value, data)`).
+- **Deletion**:
+  - Delete a node with a specific value (`deleteNode(value)`).
+- **Utilities**:
+  - Print the entire list (`print()`).
+
+---
+
+### Code Structure
+
+#### `Node` Class
+- Represents a node in the circular linked list.
+- Contains:
+  - `int data`: Value stored in the node.
+  - `Node* Next`: Pointer to the next node.
+
+#### `Linked_List` Class
+- Manages the circular linked list.
+- Contains:
+  - `Node* tail`: Pointer to the last node (points to the head).
+- Methods:
+  - `insert(int value, int data)`
+  - `deleteNode(int value)`
+  - `print()`
+
+---
+
